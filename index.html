@@ -3,170 +3,320 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GM Chess Academy Puzzle Race LeaderBoard</title>
+  <title>GM Chess Academy Puzzle Race LeaderBoard (18 Races)</title>
   <style>
     body {
       font-family: 'Arial', sans-serif;
-      background: #f4f6f8;
+      background-color: #f4f6f8;
+      margin: 0;
       padding: 30px;
+      color: #333;
     }
 
     h1 {
       text-align: center;
+      font-size: 2.8em;
+      font-weight: 700;
       color: #333;
       margin-bottom: 30px;
-      font-size: 2.2em;
-      font-weight: 600;
     }
 
     table {
-      width: 80%;
+      width: 100%;
+      max-width: 1200px;
       margin: 0 auto;
       border-collapse: collapse;
-      background: white;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      background-color: white;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
     }
 
     th, td {
-      padding: 18px;
+      padding: 20px;
       text-align: center;
+      font-size: 1.2em;
       border-bottom: 1px solid #ddd;
-      font-size: 1.1em;
-      transition: all 0.3s ease;
+      transition: background-color 0.3s ease, transform 0.3s ease;
     }
 
     th {
-      background-color: #343A40; /* Green background */
+      background-color: #343A40;
       color: white;
-      font-size: 1.3em;
       text-transform: uppercase;
-      font-weight: bold;
+      font-weight: 600;
+      font-size: 1.3em;
     }
 
     tr:nth-child(even) {
-      background: #f9f9f9;
+      background-color: #f9f9f9;
     }
 
     tr:hover td {
-      transform: scale(1.1);
-      cursor: pointer;
+      transform: scale(1.05);
+      background-color: #f1f1f1;
     }
 
     .gold {
       background-color: #ffcc00;
       font-weight: bold;
       color: #222;
-      font-size: 1.1em;
     }
 
     .silver {
       background-color: #d3d3d3;
       font-weight: bold;
       color: #222;
-      font-size: 1.1em;
     }
 
     .bronze {
       background-color: #cd7f32;
       font-weight: bold;
       color: #222;
-      font-size: 1.1em;
     }
 
     .capitalize {
-      text-transform: uppercase;
+      text-transform: capitalize;
     }
 
-    /* Mobile responsiveness */
+    /* Responsive Design */
     @media screen and (max-width: 768px) {
-      table {
-        width: 100%; /* Make the table width 100% on smaller screens */
-      }
-
       th, td {
-        padding: 12px; /* Reduce padding for better spacing on mobile */
-        font-size: 0.95em; /* Slightly smaller font for better fit */
+        padding: 15px;
+        font-size: 1em;
       }
 
       h1 {
-        font-size: 1.8em; /* Adjust font size of heading for small screens */
+        font-size: 2em;
+	text-align: center;
+	width: 100%;
+	margin-left: 15%;
       }
 
-      /* Stack table columns for small screens */
-      th, td {
-        display: block;
-        width: 100%;
-        text-align: left;
-        padding: 8px 12px;
-      }
-
-      /* Add some margin between each row */
-      tr {
-        margin-bottom: 10px;
-        display: block;
-        background: #fff;
-        border-radius: 10px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      table {
+        width: 95%;
       }
 
       tr:nth-child(even) {
-        background: #f3f3f3;
-      }
-
-      .gold, .silver, .bronze {
-        font-size: 1.05em;
-      }
-
-      /* Adjust padding for small screens on table rows */
-      tr:hover td {
-        transform: none; /* No scaling on hover for mobile */
+        background-color: #f4f4f4;
       }
     }
 
-    /* For even smaller screens */
     @media screen and (max-width: 480px) {
       th, td {
-        font-size: 0.9em; /* Make text slightly smaller */
+        font-size: 0.9em;
+        padding: 12px;
       }
 
       h1 {
-        font-size: 1.6em; /* Adjust heading size for smaller screens */
+        font-size: 1.6em;
+      }
+
+      table {
+        width: 100%;
       }
     }
   </style>
 </head>
 <body>
+
   <h1>🏆 GM Chess Academy Puzzle Race LeaderBoard (18 Races) 🏆</h1>
+
   <table>
     <thead>
       <tr>
         <th>Rank</th>
         <th>Name</th>
         <th>Score</th>
-        <th>No. of Races</th>
-        <th>Average Score Per Race</th>
+        <th>Attendance</th>
+        <th>Average Score per Race</th>
       </tr>
     </thead>
     <tbody>
-      <tr class="gold"><td>1 🥇</td><td class="capitalize">Devin R J</td><td>1552</td><td>18</td><td>17.25</td></tr>
-      <tr class="silver"><td>2 🥈</td><td class="capitalize">Rakesh Bharathi M</td><td>1210</td><td>16</td><td>15.13</td></tr>
-      <tr class="bronze"><td>3 🥉</td><td class="capitalize">Gautam K</td><td>1074</td><td>15</td><td>14.32</td></tr>
-      <tr><td>4</td><td class="capitalize">Suryadeep D</td><td>752</td><td>15</td><td>10.03</td></tr>
-      <tr><td>5</td><td class="capitalize">Sairam R M</td><td>663</td><td>15</td><td>8.84</td></tr>
-      <tr><td>6</td><td class="capitalize">Ahilesh A</td><td>491</td><td>9</td><td>10.91</td></tr>
-      <tr><td>7</td><td class="capitalize">Rejoicelin G F</td><td>456</td><td>11</td><td>8.29</td></tr>
-      <tr><td>8</td><td class="capitalize">Saikrishav A</td><td>424</td><td>10</td><td>8.48</td></tr>
-      <tr><td>9</td><td class="capitalize">Amrish T</td><td>402</td><td>9</td><td>8.93</td></tr>
-      <tr><td>10</td><td class="capitalize">Rejoselin G F</td><td>201</td><td>9</td><td>4.47</td></tr>
-      <tr><td>11</td><td class="capitalize">Christoan R</td><td>141</td><td>9</td><td>3.13</td></tr>
-      <tr><td>12</td><td class="capitalize">Gibson R</td><td>141</td><td>9</td><td>3.13</td></tr>
-      <tr><td>13</td><td class="capitalize">Juwan Vinish J</td><td>123</td><td>9</td><td>2.73</td></tr>
-      <tr><td>14</td><td class="capitalize">Ishaan Arsh</td><td>31</td><td>9</td><td>0.69</td></tr>
-      <tr><td>15</td><td class="capitalize">Mounish M</td><td>218</td><td>9</td><td>4.84</td></tr>
-      <tr><td>16</td><td class="capitalize">Naresh A</td><td>116</td><td>9</td><td>2.58</td></tr>
-      <tr><td>17</td><td class="capitalize">Rakshitha T</td><td>180</td><td>9</td><td>4.00</td></tr>
-      <tr><td>18</td><td class="capitalize">Ramnath Revanth S</td><td>12</td><td>9</td><td>0.27</td></tr>
+      <!-- Data entries start here -->
+      <tr class="gold">
+        <td>1 🥇</td>
+        <td class="capitalize">Devin R J</td>
+        <td>1552</td>
+        <td>18</td>
+        <td>17.25</td>
+      </tr>
+      <tr class="silver">
+        <td>2 🥈</td>
+        <td class="capitalize">Rakesh Bharathi M</td>
+        <td>1210</td>
+        <td>16</td>
+        <td>15.13</td>
+      </tr>
+      <tr class="bronze">
+        <td>3 🥉</td>
+        <td class="capitalize">Gautam K</td>
+        <td>1074</td>
+        <td>15</td>
+        <td>14.32</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td class="capitalize">Suryadeep D</td>
+        <td>752</td>
+        <td>15</td>
+        <td>10.03</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td class="capitalize">Sairam R M</td>
+        <td>663</td>
+        <td>15</td>
+        <td>8.84</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td class="capitalize">Ahilesh A</td>
+        <td>491</td>
+        <td>9</td>
+        <td>10.92</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td class="capitalize">Rejoicelin G F</td>
+        <td>456</td>
+        <td>11</td>
+        <td>8.30</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td class="capitalize">Saikrishav A</td>
+        <td>424</td>
+        <td>10</td>
+        <td>8.48</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td class="capitalize">Amrish T</td>
+        <td>402</td>
+        <td>9</td>
+        <td>8.94</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td class="capitalize">Supratik</td>
+        <td>260</td>
+        <td>11</td>
+        <td>4.73</td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td class="capitalize">Mounish M</td>
+        <td>218</td>
+        <td>9</td>
+        <td>4.85</td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td class="capitalize">Rejoselin G F</td>
+        <td>201</td>
+        <td>8</td>
+        <td>5.03</td>
+      </tr>
+      <tr>
+        <td>13</td>
+        <td class="capitalize">Rakshitha T</td>
+        <td>180</td>
+        <td>6</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>14</td>
+        <td class="capitalize">Christoan R</td>
+        <td>141</td>
+        <td>3</td>
+        <td>9.4</td>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td class="capitalize">Gibson R</td>
+        <td>141</td>
+        <td>4</td>
+        <td>7.05</td>
+      </tr>
+      <tr>
+        <td>16</td>
+        <td class="capitalize">Juwan Vinish J</td>
+        <td>123</td>
+        <td>2</td>
+        <td>12.3</td>
+      </tr>
+      <tr>
+        <td>17</td>
+        <td class="capitalize">Naresh A</td>
+        <td>116</td>
+        <td>2</td>
+        <td>11.6</td>
+      </tr>
+      <tr>
+        <td>18</td>
+        <td class="capitalize">Yedhanth S K</td>
+        <td>113</td>
+        <td>6</td>
+        <td>3.77</td>
+      </tr>
+      <tr>
+        <td>19</td>
+        <td class="capitalize">Sanjith M</td>
+        <td>69</td>
+        <td>3</td>
+        <td>4.6</td>
+      </tr>
+      <tr>
+        <td>20</td>
+        <td class="capitalize">Dhanya S</td>
+        <td>68</td>
+        <td>2</td>
+        <td>6.8</td>
+      </tr>
+      <tr>
+        <td>21</td>
+        <td class="capitalize">Kesika S K</td>
+        <td>54</td>
+        <td>4</td>
+        <td>2.7</td>
+      </tr>
+      <tr>
+        <td>22</td>
+        <td class="capitalize">Ishaan Arsh</td>
+        <td>31</td>
+        <td>2</td>
+        <td>3.1</td>
+      </tr>
+      <tr>
+        <td>23</td>
+        <td class="capitalize">Ramnath Revanth S</td>
+        <td>12</td>
+        <td>2</td>
+        <td>1.2</td>
+      </tr>
+      <tr>
+        <td>24</td>
+        <td class="capitalize">Sanjay R</td>
+        <td>11</td>
+        <td>1</td>
+        <td>2.2</td>
+      </tr>
+      <tr>
+        <td>25</td>
+        <td class="capitalize">Chris Matteo A L</td>
+        <td>10</td>
+        <td>1</td>
+        <td>2</td>
+      </tr>
     </tbody>
   </table>
+
+</body>
+</html>
+
+    </tbody>
+  </table>
+
 </body>
 </html>
