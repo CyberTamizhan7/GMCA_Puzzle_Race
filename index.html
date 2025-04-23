@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GM Chess Academy Puzzle Race LeaderBoard</title>
   <style>
     body {
@@ -27,17 +28,17 @@
     }
 
     th, td {
-      padding: 18px; /* Improved padding */
+      padding: 18px;
       text-align: center;
       border-bottom: 1px solid #ddd;
-      font-size: 1.1em; /* Increased font size for all table cells */
+      font-size: 1.1em;
       transition: all 0.3s ease;
     }
 
     th {
       background-color: #343A40; /* Green background */
       color: white;
-      font-size: 1.3em; /* Increased font size for headers */
+      font-size: 1.3em;
       text-transform: uppercase;
       font-weight: bold;
     }
@@ -47,27 +48,26 @@
     }
 
     tr:hover td {
-      transform: scale(1.1); /* Enlarging effect on hover */
+      transform: scale(1.1);
       cursor: pointer;
     }
 
-    /* Top 3 special rows with unique colors */
     .gold {
-      background-color: #ffcc00; /* Gold color */
+      background-color: #ffcc00;
       font-weight: bold;
       color: #222;
       font-size: 1.1em;
     }
 
     .silver {
-      background-color: #d3d3d3; /* Light Silver color */
+      background-color: #d3d3d3;
       font-weight: bold;
       color: #222;
       font-size: 1.1em;
     }
 
     .bronze {
-      background-color: #cd7f32; /* Bronze color */
+      background-color: #cd7f32;
       font-weight: bold;
       color: #222;
       font-size: 1.1em;
@@ -75,6 +75,63 @@
 
     .capitalize {
       text-transform: uppercase;
+    }
+
+    /* Mobile responsiveness */
+    @media screen and (max-width: 768px) {
+      table {
+        width: 100%; /* Make the table width 100% on smaller screens */
+      }
+
+      th, td {
+        padding: 12px; /* Reduce padding for better spacing on mobile */
+        font-size: 0.95em; /* Slightly smaller font for better fit */
+      }
+
+      h1 {
+        font-size: 1.8em; /* Adjust font size of heading for small screens */
+      }
+
+      /* Stack table columns for small screens */
+      th, td {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding: 8px 12px;
+      }
+
+      /* Add some margin between each row */
+      tr {
+        margin-bottom: 10px;
+        display: block;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
+
+      tr:nth-child(even) {
+        background: #f3f3f3;
+      }
+
+      .gold, .silver, .bronze {
+        font-size: 1.05em;
+      }
+
+      /* Adjust padding for small screens on table rows */
+      tr:hover td {
+        transform: none; /* No scaling on hover for mobile */
+      }
+    }
+
+    /* For even smaller screens */
+    @media screen and (max-width: 480px) {
+      th, td {
+        font-size: 0.9em; /* Make text slightly smaller */
+      }
+
+      h1 {
+        font-size: 1.6em; /* Adjust heading size for smaller screens */
+      }
     }
   </style>
 </head>
